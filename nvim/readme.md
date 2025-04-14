@@ -16,7 +16,7 @@
 -   stow nvim    
 
 
-##   Bước 3: Kiểm tra
+##  Bước 3: Kiểm tra
 -   ls -l ~/.config | grep nvim
 -   nvim -> /home/theanhdev/dotfiles-myconfig/nvim/.config/nvim
 
