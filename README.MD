@@ -6,3 +6,12 @@
 
 ##  🛠️ Cài GNU Stow trên Arch Linux.
 **- sudo pacman -S stow .**
+
+##  🧹 Xóa symlink (gỡ cấu hình tạm thời)
+-   Gỡ 1 liên kết
+**- stow -D ten_symlink**
+-   Gỡ tất cả
+**- stow -D * .**
+
+-   Thêm nvim với stow nvim [/home/theanhdev/dotfiles-myconfig/nvim/.config/nvim](nvim)
+
