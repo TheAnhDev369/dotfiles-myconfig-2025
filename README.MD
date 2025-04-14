@@ -16,3 +16,6 @@
 -   Thêm nvim với stow nvim [/home/theanhdev/dotfiles-myconfig/nvim/.config/nvim](nvim)
 
 -   Thêm wezterm với stow wezterm [/home/theanhdev/dotfiles-myconfig/wezterm/.config/wezterm](wezterm)
+
+
+-   Thêm tmux với stow tmux [/home/theanhdev/dotfiles-myconfig/tmux/.tmux.conf](tmux)
