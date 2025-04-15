@@ -49,6 +49,3 @@ Ctrl+a :source-file ~/.tmux.conf
 rm ~/.tmux.conf.bak
 ```
 
----
-
-

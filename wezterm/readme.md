@@ -143,4 +143,3 @@ wezterm
 rm ~/.wezterm.lua.bak
 ```
 
----

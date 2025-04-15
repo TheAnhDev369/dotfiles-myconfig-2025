@@ -72,5 +72,5 @@ rm -rf ~/.config/ghostty-backup
 3. Đã chạy `stow ghostty` để tạo symlink mới.
 4. Đã copy lại config/plugin từ `ghostty-backup`.
 
----
+
 
