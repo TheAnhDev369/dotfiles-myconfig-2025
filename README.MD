@@ -17,5 +17,8 @@
 
 -   Thêm wezterm với stow wezterm [/home/theanhdev/dotfiles-myconfig/wezterm/.config/wezterm](wezterm)
 
-
 -   Thêm tmux với stow tmux [/home/theanhdev/dotfiles-myconfig/tmux/.tmux.conf](tmux)
+
+-   Thêm ghostty với stow ghostty [/home/theanhdev/dotfiles-myconfig/ghossty/.config/ghostty/config.md](ghostty)
+
+-   Thêm kitty với stow kitty [/home/theanhdev/dotfiles-myconfig/kitty/.config/kitty/kitty.conf](kitty)
