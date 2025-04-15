@@ -1,44 +1,54 @@
-##  Bước 1: Backup lại folder cũ
--   mv ~/.tmux.conf ~/.tmux.conf.bak
+## 🔧 Hướng dẫn sử dụng `stow` cho Tmux
 
-##  Bước 2: Copy lại vào dotfiles-myconfig và chạy lại lệnh stow
--   mkdir -p ~/dotfiles-myconfig/tmux
--   cd ~/dotfiles-myconfig
--   stow tmux    
+### Bước 1: Backup lại file cũ
 
-##  Bước 3: Kiểm tra
--   ls -l ~/.tmux.conf
+```bash
+mv ~/.tmux.conf ~/.tmux.conf.bak
+```
 
-### Vậy là thành công 🎉
+### Bước 2: Copy lại vào dotfiles-myconfig và chạy lệnh `stow`
 
-##  Bước 4: Lấy lại config cũ
--   cp ~/.tmux.conf.bak ~/dotfiles-myconfig/tmux/.tmux.conf
-**- Rồi restow lại**
--   stow -R tmux
+```bash
+mkdir -p ~/dotfiles-myconfig/tmux
+cp ~/.tmux.conf.bak ~/dotfiles-myconfig/tmux/.tmux.conf
+cd ~/dotfiles-myconfig
+stow tmux
+```
 
-##  Bước 5: Copy lại config/plugins từ bản cũ
+### Bước 3: Kiểm tra
 
--   cp ~/.tmux.conf.bak ~/dotfiles-myconfig/tmux/
--   cp ~/.tmux.conf.bak ~/dotfiles-myconfig/tmux/ 2>/dev/null
+```bash
+ls -l ~/.tmux.conf
+```
 
-##  Bước 6: Kiểm tra lại nội dung thu mục mới
--   ls -l ~/.tmux.conf
+✅ **Vậy là thành công!** 🎉
 
-**- Ta thấy file .tmux.conf
+### Bước 4: Lấy lại config cũ nếu cần
 
-**- Mở lại tmux để tự động cài lại plugin:**
--   tmux
-**- Cập nhật thay đổi cho tmux với source-file path/to/file.**
--   tmux -> Ctrl+a :source-file
+```bash
+cp ~/.tmux.conf.bak ~/dotfiles-myconfig/tmux/.tmux.conf
+stow -R tmux
+```
 
-**- 4. Xóa bản backup (nếu mọi thứ OK)**
--   rm ~/.tmux.conf.bak
+### Bước 5: Kiểm tra lại nội dung thư mục mới
 
-#   Tóm tắt lại quá trình đã làm :
-1.  Đã tạo folder /tmux/.tmux.conf đúng chuẩn cho stow.
+```bash
+ls -l ~/.tmux.conf
+```
 
-2.  Đã backup và xóa file ~/.tmux.conf cũ.
+- Mở lại tmux để cài lại plugin nếu có:
 
-3.  Đã chạy stow tmux để tạo symlink mới.
+```bash
+tmux
+Ctrl+a :source-file ~/.tmux.conf
+```
 
-4.  Đang chuẩn bị copy lại config/plugin từ .tmux.config.bak .
+### Bước 6: Xóa bản backup nếu mọi thứ OK
+
+```bash
+rm ~/.tmux.conf.bak
+```
+
+---
+
+

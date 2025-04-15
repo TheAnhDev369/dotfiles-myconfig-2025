@@ -1,47 +1,146 @@
-##  Bước 1: Backup lại folder cũ
--   mv ~/.wezterm.lua ~/.wezterm.lua.bak
+## 🔧 Hướng dẫn sử dụng `stow` cho Kitty
 
-##  Bước 2: Copy lại vào dotfiles-myconfig và chạy lại lệnh stow
--   mkdir -p ~/dotfiles-myconfig/wezterm/.config/wezterm   
--   cd ~/dotfiles-myconfig
--   stow wezterm    
+### Bước 1: Backup lại folder cũ
 
-##  Bước 3: Kiểm tra
--   ls -l ~/.config | grep wezterm
--   ls -l ~/.config/wezterm/wezterm.lua
+```bash
+mv ~/.config/kitty ~/.config/kitty-backup
+```
 
-### Vậy là thành công 🎉
+### Bước 2: Tạo folder đúng chuẩn stow và copy config cũ vào
 
+```bash
+mkdir -p ~/dotfiles-myconfig/kitty/.config/kitty
+cp -r ~/.config/kitty-backup/* ~/dotfiles-myconfig/kitty/.config/kitty/
+cp -r ~/.config/kitty-backup/.* ~/dotfiles-myconfig/kitty/.config/kitty/ 2>/dev/null
+```
 
-##  Bước 4: Lấy lại config cũ
--   cp ~/.wezterm.lua.bak ~/dotfiles-myconfig/wezterm/.config/wezterm/wezterm.lua
-**- Rồi restow lại**
--   stow -R wezterm
+### Bước 3: Chạy `stow`
 
+```bash
+cd ~/dotfiles-myconfig
+stow kitty
+```
 
-##  Bước 5: Copy lại config/plugins từ bản cũ
+### Bước 4: Kiểm tra
 
--   cp ~/.wezterm.lua.bak ~/dotfiles-myconfig/wezterm/.config/wezterm/
--   cp ~/.wezterm.lua.bak ~/dotfiles-myconfig/wezterm/.config/wezterm/ 2>/dev/null
+```bash
+ls -l ~/.config | grep kitty
+```
 
+- Kết quả: `kitty -> ../dotfiles-myconfig/kitty/.config/kitty`
 
-##  Bước 6: Kiểm tra lại nội dung thu mục mới
--   ls ~/dotfiles-myconfig/wezterm/.config/wezterm
+✅ **Vậy là thành công!** 🎉
 
-**- TA thấy file .wezterm.lua
+### Bước 5: Xóa bản backup nếu mọi thứ đã OK
 
-**- Mở lại wezterm để tự động cài lại plugin:**
--   wezterm
+```bash
+rm -rf ~/.config/kitty-backup
+```
 
-**- 4. Xóa bản backup (nếu mọi thứ OK)**
--   rm -rf ~/.config/wezterm.lua.bak
+---
 
+## 🔧 Hướng dẫn sử dụng `stow` cho Tmux
 
-#   Tóm tắt lại quá trình đã làm :
-1.  Đã tạo folder wezterm/.config/wezterm đúng chuẩn cho stow.
+### Bước 1: Backup lại file cũ
 
-2.  Đã backup và xóa folder ~/.config/wezterm cũ.
+```bash
+mv ~/.tmux.conf ~/.tmux.conf.bak
+```
 
-3.  Đã chạy stow wezterm để tạo symlink mới.
+### Bước 2: Copy lại vào dotfiles-myconfig và chạy lệnh `stow`
 
-4.  Đang chuẩn bị copy lại config/plugin từ wezterm.lua.bak .
+```bash
+mkdir -p ~/dotfiles-myconfig/tmux
+cp ~/.tmux.conf.bak ~/dotfiles-myconfig/tmux/.tmux.conf
+cd ~/dotfiles-myconfig
+stow tmux
+```
+
+### Bước 3: Kiểm tra
+
+```bash
+ls -l ~/.tmux.conf
+```
+
+✅ **Vậy là thành công!** 🎉
+
+### Bước 4: Lấy lại config cũ nếu cần
+
+```bash
+cp ~/.tmux.conf.bak ~/dotfiles-myconfig/tmux/.tmux.conf
+stow -R tmux
+```
+
+### Bước 5: Kiểm tra lại nội dung thư mục mới
+
+```bash
+ls -l ~/.tmux.conf
+```
+
+- Mở lại tmux để cài lại plugin nếu có:
+
+```bash
+tmux
+Ctrl+a :source-file ~/.tmux.conf
+```
+
+### Bước 6: Xóa bản backup nếu mọi thứ OK
+
+```bash
+rm ~/.tmux.conf.bak
+```
+
+---
+
+## 🔧 Hướng dẫn sử dụng `stow` cho Wezterm
+
+### Bước 1: Backup lại file cũ
+
+```bash
+mv ~/.wezterm.lua ~/.wezterm.lua.bak
+```
+
+### Bước 2: Copy lại vào dotfiles-myconfig và chạy lệnh `stow`
+
+```bash
+mkdir -p ~/dotfiles-myconfig/wezterm/.config/wezterm
+cp ~/.wezterm.lua.bak ~/dotfiles-myconfig/wezterm/.config/wezterm/wezterm.lua
+cd ~/dotfiles-myconfig
+stow wezterm
+```
+
+### Bước 3: Kiểm tra
+
+```bash
+ls -l ~/.config | grep wezterm
+ls -l ~/.config/wezterm/wezterm.lua
+```
+
+✅ **Vậy là thành công!** 🎉
+
+### Bước 4: Lấy lại config cũ nếu cần
+
+```bash
+cp ~/.wezterm.lua.bak ~/dotfiles-myconfig/wezterm/.config/wezterm/wezterm.lua
+stow -R wezterm
+```
+
+### Bước 5: Kiểm tra lại nội dung thư mục mới
+
+```bash
+ls ~/dotfiles-myconfig/wezterm/.config/wezterm
+```
+
+- Mở lại Wezterm để cập nhật:
+
+```bash
+wezterm
+```
+
+### Bước 6: Xóa bản backup nếu mọi thứ OK
+
+```bash
+rm ~/.wezterm.lua.bak
+```
+
+---
