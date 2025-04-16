@@ -33,3 +33,8 @@
 -   Thêm với: `stow kitty`
 -   Đường dẫn: [`~/dotfiles-myconfig/kitty/.config/kitty/kitty.conf`](kitty)
 
+
+### 🔹 Lazygit
+-   Thêm với: `stow lazygit`
+-   Đường dẫn: [`~/dotfiles-myconfig/lazygit/.config/lazygit/config.yml`](lazygit)
+
