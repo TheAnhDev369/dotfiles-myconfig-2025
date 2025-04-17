@@ -34,7 +34,11 @@
 -   Đường dẫn: [`~/dotfiles-myconfig/kitty/.config/kitty/kitty.conf`](kitty)
 
 
-### 🔹 Lazygit
--   Thêm với: `stow lazygit`
--   Đường dẫn: [`~/dotfiles-myconfig/lazygit/.config/lazygit/config.yml`](lazygit)
+### 🔹 Bashrc
+-   Thêm với: `stow bash`
+-   Đường dẫn: [`~/dotfiles-myconfig/bash/.bashrc`](bash)
 
+
+### 🔹 Zshrc
+-   Thêm với: `stow zsh`
+-   Đường dẫn: [`~/dotfiles-myconfig/zsh/.zshrc`](zsh)
