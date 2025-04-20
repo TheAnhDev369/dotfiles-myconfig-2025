@@ -33,6 +33,9 @@
 -   Thêm với: `stow kitty`
 -   Đường dẫn: [`~/dotfiles-myconfig/kitty/.config/kitty/kitty.conf`](kitty)
 
+### 🔹 Alacritty
+-   Thêm với: `stow alacritty`
+-   Đường dẫn: [`~/dotfiles-myconfig/alacritty/.config/alacritty/alacritty.yml`](alacritty)
 
 ### 🔹 Bashrc
 -   Thêm với: `stow bash`

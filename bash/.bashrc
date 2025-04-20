@@ -71,7 +71,7 @@ __fzf_history_suggest() {
   READLINE_LINE=$BUFFER
   READLINE_POINT=${#BUFFER}
 }
-bind -x '"\C-r": __fzf_history_suggest'
+bind -x '"\C-l": __fzf_history_suggest'
 
 #   bash-completions
 [[ $PS1 && -f /usr/share/bash-completion/bash_completion ]] && \
@@ -102,8 +102,13 @@ alias crml='~/clean-linux.sh'
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 
+#   Bash-Autocompletion
+if [ -f /usr/share/bash-completion/bash_completion ]; then
+    . /usr/share/bash-completion/bash_completion
+fi
 
-
+#   Alias source ~/.bashrc
+alias src='source ~/.bashrc && echo Reload Bash Completion'
 
 # # Enable the subsequent settings only in interactive sessions
 # case $- in
