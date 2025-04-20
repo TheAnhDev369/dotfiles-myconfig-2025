@@ -71,5 +71,5 @@ rm -rf ~/.config/ghostty-backup
 2. Đã backup và xóa folder `~/.config/ghostty` cũ.
 3. Đã chạy `stow ghostty` để tạo symlink mới.
 4. Đã copy lại config/plugin từ `ghostty-backup`.
-
+5. Change bash to zsh -> Fix themes not load
 
