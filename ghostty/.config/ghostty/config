@@ -1,4 +1,4 @@
-theme = "catppuccin-mocha"
+theme = "catppuccin-frappe"
 font-family = "JetBrainsMono Nerd Font"
 font-size = 30
 background-opacity = 0.85
@@ -8,4 +8,4 @@ cursor-color = #ea76cb
 cursor-opacity = 0.65 
 adjust-cursor-thickness = 5
 command = "/usr/bin/zsh"
-keybind = ctrl+k=reload_config
+keybind = ctrl+k=reload_config 
