@@ -1,5 +1,49 @@
 #   My dotfiles config for Arch Linux with GNU Stow
 
+### Hướng dẫn cài đặt và sử dụng GNU Stow trên Arch Linux
+
+---
+
+#### Bước 1: Cài đặt GNU Stow
+
+Sử dụng `pacman` để cài đặt:
+
+```bash
+sudo pacman -S stow
+```
+
+Kiểm tra lại phiên bản để chắc chắn cài đặt thành công:
+
+```bash
+stow --version
+```
+
+---
+
+#### Bước 2: Tạo thư mục dotfiles
+
+Tạo thư mục quản lý cấu hình như sau:
+
+```bash
+mkdir -p ~/dotfiles
+cd ~/dotfiles
+```
+
+Tổ chức cấu trúc thư mục:
+
+```
+dotfiles/
+├── nvim/
+│   └── .config/
+│       └── nvim/
+├── zsh/
+│   └── .zshrc
+├── tmux/
+│   └── .tmux.conf
+```
+
+> Lưu ý: Tên thư mục con (`nvim`, `zsh`, `tmux`) nên đặt rõ ràng để dễ dùng với Stow.
+
 ##  GNU Stow là một công cụ quản lý symbolic link (liên kết tượng trưng).
 -   Nó giúp bạn tổ chức và cài đặt các file cấu hình (dotfiles) gọn gàng vào đúng nơi hệ thống cần
 -   ví dụ: `~/.config/nvim`, `~/.zshrc`, `~/.tmux.conf`…
